@@ -9,12 +9,14 @@ export interface DanaPensiunState {
   data: DanaPensiun[];
   loading: boolean;
   error: string | null;
+  stepForm: number;
 }
 
 const initialState: DanaPensiunState = {
   data: [],
   loading: false,
   error: null,
+  stepForm: 1,
 };
 
 const danaPensiunSlice = createSlice({
@@ -28,9 +30,23 @@ const danaPensiunSlice = createSlice({
         inflation: action.payload.inflation,
       });
     },
+    nextStepForm: (state) => {
+      state.stepForm += 1;
+      if (state.stepForm > 3) {
+        state.stepForm = 1;
+      }
+      console.log(state.stepForm);
+    },
+    prevStepForm: (state) => {
+      state.stepForm -= 1;
+      if (state.stepForm < 1) {
+        state.stepForm = 1;
+      }
+    },
   },
 });
 
-export const { addDanaPensiun } = danaPensiunSlice.actions;
+export const { addDanaPensiun, nextStepForm, prevStepForm } =
+  danaPensiunSlice.actions;
 
 export default danaPensiunSlice.reducer;

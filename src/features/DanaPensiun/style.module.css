@@ -1,0 +1,43 @@
+.pageWrapper {
+    min-height: 100vh;
+    background-color: var(--white-primary);
+    padding: 3% 6% 3% 6%;
+    margin-top: 3vh;
+    border-radius: 10px;
+}
+
+.formStatusWrapper {
+    height: 10vh;
+}
+
+.active {
+    background-color: lightblue;
+}
+
+.formWrapper {
+
+}
+
+.formGroup {
+}
+
+.formLabel {
+    font-weight: bold !important;
+}
+
+.formControl {
+    transition: all 2s ease-in;
+    border: none;
+    border-bottom: 1px solid;
+    padding: 5px 10px;
+    outline: none;
+    border-radius: 0px;
+}
+
+.formControl:focus {
+    border-bottom: 2px solid;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
