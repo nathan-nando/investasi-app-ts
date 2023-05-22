@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { Nav, NavItem } from "react-bootstrap";
-import styles from "./navbar.module.css";
+import styles from "./style.module.css";
 
 export const Navbar = () => {
   const location = useLocation();

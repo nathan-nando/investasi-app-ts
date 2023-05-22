@@ -1,4 +1,4 @@
-import styles from "./root.module.css";
+import styles from "./style.module.css";
 import { FC } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Outlet } from "react-router-dom";
